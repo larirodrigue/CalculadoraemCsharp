@@ -5,13 +5,20 @@ class Calculadora
     static void Main(string[] args)
     {
         var Operacoes = new Operacoes();
-        
+
         Console.WriteLine("Calculadora iniciada");
 
         while (true)
         {
-            Console.WriteLine("Digite um valor: ");
-            int num1 = int.Parse(Console.ReadLine());
+            int num1;
+            while (true)
+            {
+                Console.WriteLine("Digite um valor: ");
+                if (int.TryParse(Console.ReadLine(), out num1))
+                    break;
+                else
+                    Console.WriteLine("Entrada inválida. Por favor, insira um número inteiro.");
+            }
 
             Console.WriteLine("Escolha uma opção:");
             Console.WriteLine("\t+ - Adição");
