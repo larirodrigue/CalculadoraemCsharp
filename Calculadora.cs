@@ -48,10 +48,17 @@ class Calculadora
                     break;
             }
 
-            Console.WriteLine("Deseja fazer outra operação? (S/N)");
-            string resposta = Console.ReadLine();
-            if (resposta.ToLower() != "s")
-                break;
+            while (true)
+            {
+                Console.WriteLine("Deseja fazer outra operação? (S/N)");
+                string resposta = Console.ReadLine();
+                if (resposta.ToLower() == "s")
+                    break;
+                else if (resposta.ToLower() == "n")
+                    Environment.Exit(0);
+                else
+                    Console.WriteLine("Insira um valor válido (S/N).");
+            }
         }
     }
 }

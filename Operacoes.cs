@@ -8,9 +8,9 @@ class Operacoes
         List<int> numeros = new List<int>();
         numeros.Add(num1);
 
-        Console.WriteLine("Digite outro valor (ou digite 'q' para calcular):");
         while (true)
         {
+            Console.WriteLine("Digite outro valor (ou digite 'q' para calcular):");
             string input = Console.ReadLine();
             if (input.ToLower() == "q")
                 break;
